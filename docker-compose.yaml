@@ -1,0 +1,35 @@
+version: '3.3'
+networks:
+  net-mhpasswordmanager-mode-development:
+    driver: bridge
+services:
+  api-gateway:
+    image: app-nx.marcoshssilva.com.br/arm64-mhpasswordmanager/api-gateway:latest
+    restart: on-failure
+    container_name: 'api-gateway'
+    depends_on:
+      - service-discovery
+    env_file:
+      - envs/api-gateway.env
+    networks:
+      - net-mhpasswordmanager-mode-development
+    ports:
+      - "8080:12050"
+  service-discovery:
+    image: app-nx.marcoshssilva.com.br/arm64-mhpasswordmanager/eureka-server:latest
+    container_name: 'service-discovery'
+    restart: on-failure
+    env_file:
+      - envs/service-discovery.env
+    networks:
+      - net-mhpasswordmanager-mode-development
+  config-services:
+    image: app-nx.marcoshssilva.com.br/arm64-mhpasswordmanager/config-services:latest
+    container_name: 'config-services'
+    depends_on:
+      - service-discovery
+    restart: on-failure
+    env_file:
+      - envs/config-services.env
+    networks:
+      - net-mhpasswordmanager-mode-development

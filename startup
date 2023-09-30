@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set COMPOSE_PROJECT_NAME=mhpasswordmanager-development
+docker-compose -f "docker-compose.yaml" up -d
