@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    users:
+      username: 'sa-authorization-server'
+      password: 'P@sswordAuthS3rv3r'
+      url: 'jdbc:postgresql://host.docker.internal:5432/db_users'
+    auth:
+      username: 'sa-authorization-server'
+      password: 'P@sswordAuthS3rv3r'
+      url: 'jdbc:postgresql://host.docker.internal:5432/db_auth'
+  flyway:
+    enabled: true
+    user: 'sa-authorization-server'
+    password: 'P@sswordAuthS3rv3r'
+    schemas:
+      - 'public'
+    url: jdbc:postgresql://host.docker.internal:5432/db_auth
+  session:
+    store-type: redis
+  redis:
+    host: host.docker.internal
+    password: '' # default no password, for set use SPRING_REDIS_PASSWORD or -Dspring.redis.password
+    port: 6379
+  rabbitmq:
+    host: host.docker.internal
+    virtual-host: vhost-password-manager
+    username: authorization-server-pm
+    password: authorization-server-pm-P@ss
+
+management:
+  endpoint:
+    health:
+      group:
+        database:
+          show-components: always
+          show-details: always
+          include:
+            - db
+            - redis
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'health'
+          - 'metrics'
+          - 'info'
