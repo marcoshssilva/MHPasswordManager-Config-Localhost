@@ -33,3 +33,29 @@ spring:
       resource-server:
         jwt:
           issuer-uri: https://localhost.com.br/mypass-manager/auth/
+
+management:
+  endpoint:
+    health:
+      group:
+        database:
+          show-components: always
+          show-details: always
+          include:
+            - db
+            - redis
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'health'
+          - 'metrics'
+          - 'info'
+
+springdoc:
+  swagger-ui:
+    oauth2-redirect-url: https://localhost.com.br/mypass-manager/users/swagger-ui/redirect
+    csrf:
+      enabled: false

@@ -46,3 +46,9 @@ management:
           - 'health'
           - 'metrics'
           - 'info'
+
+springdoc:
+  swagger-ui:
+    oauth2-redirect-url: https://localhost.com.br/mypass-manager/auth/swagger-ui/redirect
+    csrf:
+      enabled: true
