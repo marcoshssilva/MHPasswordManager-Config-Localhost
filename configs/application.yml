@@ -8,14 +8,14 @@ oauth-config-starter:
         - AUTHORIZATION_CODE
         - REFRESH_TOKEN
       redirectUris:
-        - https://localhost/mypass-manager/auth/swagger-ui/redirect
-        - https://localhost/mypass-manager/emails/swagger-ui/redirect
-        - https://localhost/mypass-manager/files/swagger-ui/redirect
-        - https://localhost/mypass-manager/passwords/swagger-ui/redirect
-        - https://localhost/mypass-manager/users/swagger-ui/redirect
+        - https://localhost.com.br/mypass-manager/auth/swagger-ui/redirect
+        - https://localhost.com.br/mypass-manager/emails/swagger-ui/redirect
+        - https://localhost.com.br/mypass-manager/files/swagger-ui/redirect
+        - https://localhost.com.br/mypass-manager/passwords/swagger-ui/redirect
+        - https://localhost.com.br/mypass-manager/users/swagger-ui/redirect
         - https://oauth.pstmn.io/v1/callback
         - https://oidcdebugger.com/debug
-        - https://localhost/mypass-manager/client/authorize
+        - https://localhost.com.br/mypass-manager/client/authorize
       scopes:
         - 'openid'
         - 'profile'
@@ -43,13 +43,13 @@ springdoc:
   show-actuator: true
   show-login-endpoint: false 
   swagger-ui:
-    oauth2-authorization-url: https://localhost/mypass-manager/auth/oauth2/authorize
-    oauth2-token-url: https://localhost/mypass-manager/auth/oauth2/token
+    oauth2-authorization-url: https://localhost.com.br/mypass-manager/auth/oauth2/authorize
+    oauth2-token-url: https://localhost.com.br/mypass-manager/auth/oauth2/token
     oauth:
       client-id: MHPasswordManager
       client-secret: b07968bd-8989-4f10-82c7-3e427e22c924
       use-basic-authentication-with-access-code-grant: on
 
 authorization:
-  issuer-uri: https://localhost/mypass-manager/auth/
-  success-logout-uri: https://localhost/mypass-manager/auth/login
+  issuer-uri: https://localhost.com.br/mypass-manager/auth/
+  success-logout-uri: https://localhost.com.br/mypass-manager/auth/login

@@ -32,7 +32,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: https://localhost/mypass-manager/auth/
+          issuer-uri: https://localhost.com.br/mypass-manager/auth/
 
 management:
   endpoint:
@@ -56,6 +56,6 @@ management:
 
 springdoc:
   swagger-ui:
-    oauth2-redirect-url: https://localhost/mypass-manager/users/swagger-ui/redirect
+    oauth2-redirect-url: https://localhost.com.br/mypass-manager/users/swagger-ui/redirect
     csrf:
       enabled: false
