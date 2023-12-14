@@ -5,3 +5,25 @@ Repository used to provide configuration files for MHPasswordManager project, ru
 ## Repositories Project
 - (source) https://github.com/marcoshssilva/MHPasswordManager
 - (config-development) https://github.com/marcoshssilva/MHPasswordManager-Config-Development
+
+## Endpoints
+
+See **application** with profile **default**
+```
+curl -X 'GET' http://localhost:8888/application/default
+```
+
+See **authorization-server** with profile **default**
+```
+curl -X 'GET' http://localhost:8888/authorization-server/default
+```
+
+See **user-service** with profile **default**
+```
+curl -X 'GET' http://localhost:8888/user-service/default
+```
+
+See **health-check**
+```
+curl -X 'GET' http://localhost:8888/actuator/health
+```
