@@ -43,13 +43,13 @@ springdoc:
   show-actuator: true
   show-login-endpoint: false 
   swagger-ui:
-    oauth2-authorization-url: https://localhost:8080/mypass-manager/auth/oauth2/authorize
-    oauth2-token-url: https://localhost:8080/mypass-manager/auth/oauth2/token
+    oauth2-authorization-url: http://localhost:8080/mypass-manager/auth/oauth2/authorize
+    oauth2-token-url: http://localhost:8080/mypass-manager/auth/oauth2/token
     oauth:
       client-id: MHPasswordManager
       client-secret: b07968bd-8989-4f10-82c7-3e427e22c924
       use-basic-authentication-with-access-code-grant: on
 
 authorization:
-  issuer-uri: https://localhost:8080/mypass-manager/auth/
-  success-logout-uri: https://localhost:8080/mypass-manager/auth/login
+  issuer-uri: http://localhost:8080/mypass-manager/auth/
+  success-logout-uri: http://localhost:8080/mypass-manager/auth/login
