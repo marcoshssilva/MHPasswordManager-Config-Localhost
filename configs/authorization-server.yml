@@ -37,6 +37,8 @@ management:
           include:
             - db
             - redis
+            - ping
+            - rabbit
     shutdown:
       enabled: false
   endpoints:
