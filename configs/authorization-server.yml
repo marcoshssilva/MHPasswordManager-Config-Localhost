@@ -51,6 +51,6 @@ management:
 
 springdoc:
   swagger-ui:
-    oauth2-redirect-url: http://localhost:8080/mypass-manager/auth/swagger-ui/redirect
+    oauth2-redirect-url: http://password-manager.localhost:8080/mypass-manager/auth/swagger-ui/redirect
     csrf:
       enabled: true
