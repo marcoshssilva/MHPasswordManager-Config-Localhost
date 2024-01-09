@@ -4,7 +4,7 @@ Repository used to provide configuration files for MHPasswordManager project, ru
 
 ## Repositories Project
 - (source) https://github.com/marcoshssilva/MHPasswordManager
-- (config-development) https://github.com/marcoshssilva/MHPasswordManager-Config-Development
+- (config-localhost) https://github.com/marcoshssilva/MHPasswordManager-Config-Localhost
 
 ## Endpoints
 

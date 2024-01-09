@@ -1,14 +1,13 @@
 version: '3.3'
 networks:
-  net-mhpasswordmanager-mode-development:
+  net-mhpasswordmanager-mode-localhost:
     driver: bridge
 services:
   config-services:
-    image: app-nx.marcoshssilva.com.br/marcoshssilvadev/passwordmanager-configservices:latest
-    restart: on-failure
+    image: app-nx.marcoshssilva.com.br/x86-64/password-manager/config-services:latest
     env_file:
       - envs/config-services.env
     networks:
-      - net-mhpasswordmanager-mode-development
+      - net-mhpasswordmanager-mode-localhost
     ports:
       - "8888:8888"

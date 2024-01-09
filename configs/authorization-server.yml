@@ -3,30 +3,29 @@ spring:
     users:
       username: 'sa-authorization-server'
       password: 'P@sswordAuthS3rv3r'
-      url: 'jdbc:postgresql://host.docker.internal:5432/db_users'
+      url: 'jdbc:postgresql://127.0.0.1:5432/db_users'
     auth:
       username: 'sa-authorization-server'
       password: 'P@sswordAuthS3rv3r'
-      url: 'jdbc:postgresql://host.docker.internal:5432/db_auth'
+      url: 'jdbc:postgresql://127.0.0.1:5432/db_auth'
   flyway:
     enabled: true
     user: 'sa-authorization-server'
     password: 'P@sswordAuthS3rv3r'
     schemas:
       - 'public'
-    url: jdbc:postgresql://host.docker.internal:5432/db_auth
+    url: jdbc:postgresql://127.0.0.1:5432/db_auth
   session:
     store-type: redis
   redis:
-    host: host.docker.internal
+    host: 127.0.0.1
     password: '' # default no password, for set use SPRING_REDIS_PASSWORD or -Dspring.redis.password
     port: 6379
   rabbitmq:
-    host: host.docker.internal
+    host: 127.0.0.1
     virtual-host: vhost-password-manager
     username: authorization-server-pm
     password: authorization-server-pm-P@ss
-
 management:
   endpoint:
     health:
@@ -48,7 +47,6 @@ management:
           - 'health'
           - 'metrics'
           - 'info'
-
 springdoc:
   swagger-ui:
     oauth2-redirect-url: http://127.0.0.1:8080/mypass-manager/auth/swagger-ui/redirect

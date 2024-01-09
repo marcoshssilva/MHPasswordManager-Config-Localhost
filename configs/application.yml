@@ -1,4 +1,26 @@
 oauth-config-starter:
+  users:
+
+    - username: admin
+      password: P@ssword123
+      roles:
+      - ROLE_USER
+      - ROLE_ADMIN
+      - ROLE_MASTER
+      accountNonExpired: true
+      accountNonLocked: true
+      credentialsNonExpired: true
+      enabled: true
+
+    - username: anonymous
+      password: P@ssword123
+      roles:
+        - ROLE_USER
+      accountNonExpired: true
+      accountNonLocked: true
+      credentialsNonExpired: true
+      enabled: true
+
   clients:
     - clientName: 'Registered client for PWA Client'
       clientId: MHPasswordManager
@@ -49,7 +71,6 @@ springdoc:
       client-id: MHPasswordManager
       client-secret: b07968bd-8989-4f10-82c7-3e427e22c924
       use-basic-authentication-with-access-code-grant: on
-
 authorization:
-  issuer-uri: http://host.docker.internal:8080/mypass-manager/auth/
+  issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
   success-logout-uri: http://127.0.0.1:8080/mypass-manager/auth/login
