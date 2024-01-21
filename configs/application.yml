@@ -4,9 +4,9 @@ oauth-config-starter:
     - username: admin
       password: P@ssword123
       roles:
-      - ROLE_USER
-      - ROLE_ADMIN
-      - ROLE_MASTER
+      - USER
+      - ADMIN
+      - MASTER
       accountNonExpired: true
       accountNonLocked: true
       credentialsNonExpired: true
@@ -15,7 +15,7 @@ oauth-config-starter:
     - username: anonymous
       password: P@ssword123
       roles:
-        - ROLE_USER
+        - USER
       accountNonExpired: true
       accountNonLocked: true
       credentialsNonExpired: true
