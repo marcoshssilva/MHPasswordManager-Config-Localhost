@@ -32,7 +32,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: https://127.0.0.1:8080/mypass-manager/auth/
+          issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
 management:
   endpoint:
     health:
