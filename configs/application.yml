@@ -1,6 +1,5 @@
 oauth-config-starter:
   users:
-
     - username: admin
       password: P@ssword123
       roles:
