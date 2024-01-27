@@ -7,10 +7,12 @@ spring:
     port: 6379
   data:
     mongodb:
-      database: db_files
       host: 127.0.0.1
-      password: root
-      username: root
+      username: 'sa-files-service'
+      password: 'P@sswordFil3s'
+      database: 'db_files'
+      authentication-database: 'admin'
+      authentication-mechanism: 'SCRAM-SHA-1'
   jackson:
     default-property-inclusion: non_null
     serialization:
