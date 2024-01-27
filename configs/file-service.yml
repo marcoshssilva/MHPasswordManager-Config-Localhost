@@ -1,0 +1,49 @@
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: 127.0.0.1
+    password: '' # default no password, for set use SPRING_REDIS_PASSWORD or -Dspring.redis.password
+    port: 6379
+  data:
+    mongodb:
+      database: db_files
+      host: 127.0.0.1
+      password: root
+      username: root
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      fail-on-empty-beans: false
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
+management:
+  endpoint:
+    health:
+      group:
+        database:
+          show-components: always
+          show-details: always
+          include:
+            - redis
+            - ping
+            - mongo
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'health'
+          - 'metrics'
+          - 'info'
+springdoc:
+  swagger-ui:
+    oauth2-redirect-url: ${SPRINGDOC_SWAGGERUI_OAUTH2_REDIRECT_URL:http://127.0.0.1:8080/mypass-manager/files/swagger-ui/redirect}
+    oauth2-authorization-url: ${SPRINGDOC_SWAGGERUI_OAUTH2_AUTHORIZATION_URL:http://127.0.0.1:8080/mypass-manager/auth/oauth2/authorize} # custom, doesnt exists on springdoc open-api
+    oauth2-token-url: ${SPRINGDOC_SWAGGERUI_OAUTH2_TOKEN_URL:http://127.0.0.1:8080/mypass-manager/auth/oauth2/token} # custom, doesnt exists on springdoc open-api
+    csrf:
+      enabled: false
