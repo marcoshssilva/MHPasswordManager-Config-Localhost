@@ -4,7 +4,7 @@ networks:
     driver: bridge
 services:
   config-services:
-    image: app-nx.marcoshssilva.com.br/x86-64/password-manager/config-services:latest
+    image: nx-registry.marcoshssilva.com.br/jenkins-builds/amd64/password-manager/mhpasswordmanager-config-services:latest
     env_file:
       - envs/config-services.env
     networks:
