@@ -35,10 +35,11 @@ oauth-config-starter:
         - http://127.0.0.1:8080/mypass-manager/passwords/swagger-ui/redirect
         - http://127.0.0.1:8080/mypass-manager/users/swagger-ui/redirect
         - http://127.0.0.1:8080/mypass-manager/client/authorize
+        - http://127.0.0.1:8080/authorize
+        - http://127.0.0.1:8100/authorize
         - https://oauth.pstmn.io/v1/callback
         - https://oidcdebugger.com/debug
       scopes:
-        - 'openid'
         - 'profile'
         - 'email'
       tokenSettings:
