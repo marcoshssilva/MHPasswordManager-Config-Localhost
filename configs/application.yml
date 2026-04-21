@@ -73,4 +73,4 @@ springdoc:
       use-basic-authentication-with-access-code-grant: on
 authorization:
   issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
-  success-logout-uri: http://127.0.0.1:8080/mypass-manager/auth/login
+  success-logout-uri: http://127.0.0.1:8080/mypass-manager/auth/
