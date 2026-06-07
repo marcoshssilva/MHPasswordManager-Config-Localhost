@@ -47,6 +47,8 @@ config:
     mode: DATABASE
   oauth:
     mode: DATABASE
+    server-settings:
+      issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
   users:
     mode: DATABASE
 springdoc:
@@ -59,6 +61,3 @@ springdoc:
       client-id: MHPasswordManager
       client-secret: b07968bd-8989-4f10-82c7-3e427e22c924
       use-basic-authentication-with-access-code-grant: on
-authorization:
-  issuer-uri: http://127.0.0.1:8080/mypass-manager/auth/
-  success-logout-uri: http://127.0.0.1:8080/mypass-manager/auth/
