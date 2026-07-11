@@ -26,12 +26,6 @@ application:
     default-sender: ${APPLICATION_EMAIL_DEFAULT_SENDER:no-reply@localhost.fake.mail.com}
     enable-redirect-mail: ${APPLICATION_EMAIL_ENABLE_REDIRECT_MAIL:false}
     address-redirect-mail: ${APPLICATION_EMAIL_ADDRESS_REDIRECT_MAIL:no-reply@localhost.fake.mail.com}
-logging:
-  level:
-    br.com.marcoshssilva.mhpasswordmanager.emailservice.amqp.listeners:
-      QueueSendConfirmationRegisteredUserListener: debug
-      QueueSendRecoveryCode: debug
-      QueueSendEmailListener: debug
 management:
   endpoint:
     health:
@@ -40,7 +34,6 @@ management:
           show-components: always
           show-details: always
           include:
-            - redis
             - ping
             - rabbit
             - mail

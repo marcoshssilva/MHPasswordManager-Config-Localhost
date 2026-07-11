@@ -26,7 +26,6 @@ management:
           show-components: always
           show-details: always
           include:
-            - redis
             - ping
             - mongo
     shutdown:
