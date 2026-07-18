@@ -4,7 +4,7 @@ networks:
     driver: bridge
 services:
   config-services:
-    image: dkloc.starlord443.dev/marcoshssilva/password-manager/mhpasswordmanager-config-services:latest
+    image: docker.io/marcoshssilvadev/mhpasswordmanager-config-services
     env_file:
       - envs/config-services.env
     networks:
