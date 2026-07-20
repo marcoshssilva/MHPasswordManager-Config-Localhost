@@ -21,6 +21,7 @@ oauth-config-starter:
       scopes:
         - 'profile'
         - 'email'
+        - 'openid'
       tokenSettings:
         durationInMillis: 900000
         reuseRefreshToken: false
@@ -40,6 +41,18 @@ oauth-config-starter:
         - 'users:read'
         - 'users:write'
         - 'users:reset-password'
+      tokenSettings:
+        durationInMillis: 180000
+    - clientName: 'Eureka Service Account'
+      clientId: 9a0f14e4-412d-4a7e-be7b-5c7d3280546d
+      clientSecret: 1049b679-7705-4565-a223-c0b86f3e0ae2
+      authenticationMethod: CLIENT_SECRET_BASIC
+      authenticationGrantTypes:
+        - CLIENT_CREDENTIALS
+      scopes:
+        - 'eureka:read'
+        - 'eureka:write'
+        - 'eureka:web'
       tokenSettings:
         durationInMillis: 180000
 config:
