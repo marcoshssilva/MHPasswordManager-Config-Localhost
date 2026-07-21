@@ -1,13 +1,12 @@
-version: '3.3'
 networks:
-  net-mhpasswordmanager-mode-localhost:
+  net:
     driver: bridge
 services:
-  config-services:
+  configserver:
     image: docker.io/marcoshssilvadev/mhpasswordmanager-config-services
     env_file:
       - envs/config-services.env
     networks:
-      - net-mhpasswordmanager-mode-localhost
+      - net
     ports:
       - "8888:8888"
