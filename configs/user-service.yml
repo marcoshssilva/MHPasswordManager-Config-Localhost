@@ -52,3 +52,13 @@ springdoc:
     oauth2-redirect-url: http://127.0.0.1:8080/mypass-manager/users/swagger-ui/redirect
     csrf:
       enabled: false
+storage:
+  s3:
+    endpoint: http://localhost:9000
+    region: us-east-1
+    bucket: mhp-files
+    access-key: user-service
+    secret-key: MHPasswordManagerUserService2026
+    path-style-access: true
+avatar:
+  default-public-base-url: http://127.0.0.1:8080
