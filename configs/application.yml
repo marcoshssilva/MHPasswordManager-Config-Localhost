@@ -22,6 +22,7 @@ oauth-config-starter:
         - 'profile'
         - 'email'
         - 'openid'
+        - 'offline_access'
         - 'user:changeImageProfile'
         - 'user:delete'
         - 'user:validatePassword'
